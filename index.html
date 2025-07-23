@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dylan Singer | Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              fade: 'fadeIn 1s ease-out both',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0, transform: 'translateY(20px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        background-color: #0f0f0f;
+      }
+    </style>
+  </head>
+
+  <body class="text-white font-sans antialiased leading-relaxed">
+    <main class="max-w-4xl mx-auto px-6 py-16 space-y-20">
+
+      <!-- Header -->
+      <header class="animate-fade">
+        <h1 class="text-5xl font-bold mb-4">Dylan Singer</h1>
+        <p class="text-gray-400 text-lg max-w-xl">
+          Developer with a passion for clean code, embedded systems, and thoughtful UX.
+        </p>
+      </header>
+
+      <!-- About Me -->
+      <section id="about" class="animate-fade">
+        <h2 class="text-2xl font-semibold mb-2">About Me</h2>
+        <p class="text-gray-300 max-w-2xl">
+          I’m a self-taught developer with a BSc in Computer Science and a passion for building both software and hardware. From mobile apps like <em>HelpOut</em> to desktop tools like <em>ClipSage</em>, I enjoy crafting thoughtful user experiences and pushing myself to learn new domains like embedded engineering.
+        </p>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="animate-fade">
+        <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+        <div class="grid gap-6 sm:grid-cols-2">
+          <!-- Project Card 1 -->
+          <div class="bg-gray-900 p-5 rounded-xl shadow-md hover:scale-[1.02] transition">
+            <h3 class="text-xl font-bold">HelpOut</h3>
+            <p class="text-gray-300 text-sm mt-1">
+              A community-driven casual jobs platform with map integration and gamified trust.
+            </p>
+            <p class="text-xs text-gray-500 mt-2">Flutter · Firebase · Google Maps</p>
+            <a href="https://github.com/dylansinger/helpout" target="_blank" class="text-blue-400 text-sm mt-3 inline-block hover:underline">View on GitHub</a>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="bg-gray-900 p-5 rounded-xl shadow-md hover:scale-[1.02] transition">
+            <h3 class="text-xl font-bold">Shared Chores</h3>
+            <p class="text-gray-300 text-sm mt-1">
+              Task management for roommates and families, with rotation logic and smooth animations.
+            </p>
+            <p class="text-xs text-gray-500 mt-2">Flutter · Firestore</p>
+            <a href="https://github.com/dylansinger/shared-chores" target="_blank" class="text-blue-400 text-sm mt-3 inline-block hover:underline">View on GitHub</a>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="bg-gray-900 p-5 rounded-xl shadow-md hover:scale-[1.02] transition">
+            <h3 class="text-xl font-bold">ClipSage</h3>
+            <p class="text-gray-300 text-sm mt-1">
+              A smart clipboard history manager with OCR and bulk paste tools.
+            </p>
+            <p class="text-xs text-gray-500 mt-2">Python · PyQt5 · OCR</p>
+            <a href="https://github.com/dylansinger/clipsage" target="_blank" class="text-blue-400 text-sm mt-3 inline-block hover:underline">View on GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume -->
+      <section id="resume" class="animate-fade">
+        <h2 class="text-2xl font-semibold mb-2">Résumé</h2>
+        <p class="text-gray-300 mb-1">
+          You can view or download my résumé below.
+        </p>
+        <a href="./Dylan_Singer_CV.pdf" target="_blank" class="text-blue-400 hover:underline text-sm">Download CV (PDF)</a>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="animate-fade">
+        <h2 class="text-2xl font-semibold mb-2">Contact</h2>
+        <ul class="space-y-1 text-gray-300 text-sm">
+          <li><a href="mailto:dylansinger.dev@gmail.com" class="hover:text-blue-400">dylansinger.dev@gmail.com</a></li>
+          <li><a href="https://github.com/dylansinger" target="_blank" class="hover:text-blue-400">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/dylansinger" target="_blank" class="hover:text-blue-400">LinkedIn</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
