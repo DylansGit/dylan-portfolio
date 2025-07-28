@@ -26,17 +26,49 @@
       html {
         background-color: #0f0f0f;
       }
+
+      .stagger > * {
+        opacity: 0;
+        animation: fadeInUp 0.6s ease forwards;
+      }
+
+      .stagger > *:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+
+      .stagger > *:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+
+      .stagger > *:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+
+      .stagger > *:nth-child(4) {
+        animation-delay: 0.8s;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     </style>
   </head>
 
-  <body class="text-white font-sans antialiased leading-relaxed">
+  <body class="text-white font-sans antialiased leading-relaxed relative">
     <main class="max-w-4xl mx-auto px-6 py-16 space-y-20">
 
       <!-- Header -->
       <header class="animate-fade">
         <h1 class="text-5xl font-bold mb-4">Dylan Singer</h1>
         <p class="text-gray-400 text-lg max-w-xl">
-          Developer with a passion for clean code, embedded systems, and thoughtful UX.
+          Developer with a passion for clean code, thoughtful UX, and full-stack product building.
         </p>
       </header>
 
@@ -44,12 +76,12 @@
       <section id="about" class="animate-fade">
         <h2 class="text-2xl font-semibold mb-2">About Me</h2>
         <p class="text-gray-300 max-w-2xl">
-          I’m a self-taught developer with a BSc in Computer Science and a passion for building both software and hardware. From mobile apps like <em>HelpOut</em> to desktop tools like <em>ClipSage</em>, I enjoy crafting thoughtful user experiences and pushing myself to learn new domains like embedded engineering.
+          I’m a self-taught developer with a BSc in Computer Science and a passion for building both software and hardware. From mobile apps like <em>HelpOut</em> to desktop tools like <em>ClipSage</em>, I enjoy crafting thoughtful user experiences and pushing myself to learn new domains.
         </p>
       </section>
 
       <!-- Projects -->
-      <section id="projects" class="animate-fade">
+      <section id="projects" class="animate-fade stagger">
         <h2 class="text-2xl font-semibold mb-4">Projects</h2>
         <div class="grid gap-6 sm:grid-cols-2">
 
@@ -110,19 +142,27 @@
         </div>
       </section>
 
+      <!-- Tech Stack -->
+      <section id="stack" class="animate-fade">
+        <h2 class="text-2xl font-semibold mb-2">Tech Stack</h2>
+        <p class="text-gray-300 text-sm max-w-2xl">
+          Flutter · Firebase · Python · React · Tailwind CSS · Node.js · MongoDB · Git · Linux · REST APIs
+        </p>
+      </section>
+
       <!-- Tech Journey -->
       <section id="journey" class="animate-fade">
         <h2 class="text-2xl font-semibold mb-2">Why I Built These</h2>
         <p class="text-gray-300 max-w-2xl">
-          Each of these projects reflects a step in my learning journey. I built the PT-CheatSheet while deep-diving into web security and penetration testing, solving CTFs on platforms like Hack The Box, PortSwigger, and TryHackMe. Projects like HelpOut and Shared Chores came from real-world needs and taught me to architect full apps from scratch — UX, backend, and logic. Programming Paradigms and API Connector reflect my passion for organizing knowledge and building tools that improve developer workflows.
+          Each of these projects reflects a step in my learning journey. I built the PT-CheatSheet while deep-diving into web security and penetration testing, solving CTFs on platforms like Hack The Box, PortSwigger, and TryHackMe. Projects like HelpOut and Shared Chores came from real-world needs and taught me to architect full apps from scratch - UX, backend, and logic. Programming Paradigms and API Connector reflect my passion for organizing knowledge and building tools that improve developer workflows.
         </p>
       </section>
 
       <!-- Resume -->
       <section id="resume" class="animate-fade">
-        <h2 class="text-2xl font-semibold mb-2">Résumé</h2>
+        <h2 class="text-2xl font-semibold mb-2">Resume</h2>
         <p class="text-gray-300 mb-1">
-          You can view or download my résumé below.
+          You can view or download my resume below.
         </p>
         <a href="./Dylan_Singer_CV.pdf" target="_blank" class="text-blue-400 hover:underline text-sm">Download CV (PDF)</a>
       </section>
@@ -137,5 +177,12 @@
         </ul>
       </section>
     </main>
+
+    <!-- Dark Mode Toggle -->
+    <button onclick="document.documentElement.classList.toggle('dark')" class="fixed bottom-4 right-4 bg-gray-800 p-2 rounded-full hover:bg-gray-700">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M10 2a8 8 0 018 8 8.001 8.001 0 01-9.874 7.75A8 8 0 1010 2z" />
+      </svg>
+    </button>
   </body>
 </html>
